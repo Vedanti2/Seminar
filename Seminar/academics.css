@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+   
+  }
+
+  
+  
+  .custom-heading {
+    text-align: center;
+    color: #333; /* Default color */
+    transition: color 0.3s ease; /* Transition for color change */
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    /* Add space from top */
+  }
+  
+  
+  .custom-paragraph {
+    text-align: center;
+    color: #666; /* Default color */
+    transition: color 0.3s ease; 
+    /* Transition for color change */
+  }
+  
+  /* Hover effects */
+  .custom-heading:hover {
+    color: #ff7f50; /* New color on hover */
+    animation: headingAnimation 0.5s ease forwards; /* Animation on hover */
+  }
+  
+  .custom-paragraph:hover {
+    color: #4682b4; /* New color on hover */
+    animation: paragraphAnimation 0.5s ease forwards; /* Animation on hover */
+  }
+  
+  /* Keyframes for animations */
+  @keyframes headingAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-5px); /* Move up on hover */
+    }
+  }
+  
+  @keyframes paragraphAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-5px); /* Move up on hover */
+    }
+  }
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background:#fff;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-align: center; 
+    margin-top: -30px;/* Center text horizontally */
+}
+
+
+.row {
+    background-color: #710e5f;
+    display: flex;
+    width: 100%;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: -10;
+}
+
+.col1, .col2 {
+    flex-basis: 50%;
+    overflow: hidden;
+}
+
+.col1 {
+    flex-basis: 40%;
+    background-color: #fff3f3;
+    padding: 8% 5%;
+    position: relative;
+}
+
+.col1 h1 {
+    font-size: 40px;
+    line-height: 80px;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+.col1 p {
+    color: #555;
+    margin-bottom: 20px; /* Add space below paragraph */
+}
+
+.explore-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 34px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.5s;
+    border: 1px solid #fff;
+}
+
+.explore-btn:hover {
+    background-color:  #f44336; /* Change background color on hover */
+}
+.col2{
+    flex-basis: 60%;
+}
+.col2 img{
+    width: 100%;
+}
+ul {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+ul li {
+    list-style: none;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #313030;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add transition for color change */
+}
+
+ul .active {
+    background: #00bcd4;
+}
+
+.zoom {
+    animation: zoomout 0.5s linear 1;
+}
+
+@keyframes zoomout {
+    0% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.explore-btn.active {
+    background-color: #00bcd4; /* Change background color when active */
+}
+
+

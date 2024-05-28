@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSMSS | Academics</title>
+    <link rel="stylesheet" href="academics.css">
+    <style></style> <!-- Corrected the link to the CSS file -->
+</head>
+<body>
+    
+        <h1 class="custom-heading">Academics</h1>
+<p class="custom-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas quo dicta non, omnis molestiae reprehenderit quis, officiis consequuntur <br> perferendis rerum inventore! quaerat eius tempora suscipit, fugiat quisquam odolore laudantium amet aut? Quasi rerum illum delectus, porro nobis est </p>
+
+        <section>
+            <div class="hero">
+               
+                <div class="row">
+                    <div class="col1">
+                        <h1>Lorem, ipsum dolor.</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium error deserunt unde assumenda incidunt qui iusto exercitationem ad. Distinctio quasi natus amet reprehenderit, consequatur optio. Recusandae, odio fugiat? Doloribus, recusandae.</p>
+                        <button type="button" class="explore-btn">explore</button>
+                        <ul>
+                            <li class="btn active"></li>
+                            <li class="btn"></li>
+                            <li class="btn"></li>
+                        </ul>
+                    </div>
+                    <div class="col2">
+                        <img src="audi.jpg" id="banner">
+                    </div>
+                </div>
+            </div>
+            <script>var btn = document.getElementsByClassName("btn");
+                var banner = document.getElementById("banner");
+                var dots = document.querySelectorAll(".btn");
+                
+                
+                function changeImage(imageSrc, activeIndex) {
+                    banner.src = imageSrc;
+                    dots.forEach(function(dot, index) {
+                        if (index === activeIndex) {
+                            dot.classList.add("active");
+                        } else {
+                            dot.classList.remove("active");
+                        }
+                    });
+                    banner.classList.add("zoom");
+                    setTimeout(function() {
+                        banner.classList.remove("zoom");
+                    }, 500);
+                }
+                
+               
+                var images = ["https://img.freepik.com/free-photo/crop-architect-opening-blueprint_23-2147710985.jpg?t=st=1716364451~exp=1716368051~hmac=7272e4f28fed2d662dfec0acf0827f967371fe673aed53ce0dccb719beb89717&w=1800", "https://media.istockphoto.com/id/862661268/photo/the-student-life.jpg?s=1024x1024&w=is&k=20&c=pudj1YXDhrykmE1c01ny1yBmzt2oh5V8oKWkrniFEXU=", "https://media.istockphoto.com/id/1589938278/photo/asian-young-man-assembling-a-robotic-car-focus-on-robotics-assembling-a-robotic-robot-to.jpg?s=1024x1024&w=is&k=20&c=_81Nwt-DlRmdzMDwIk4TwcJ2X5ozDj6-R534WJ1W8sA="];
+                
+                
+                var activeIndex = 0;
+                
+                
+                function autoChangeImage() {
+                    changeImage(images[activeIndex], activeIndex);
+                    activeIndex = (activeIndex + 1) % images.length; 
+                }
+                
+                
+                setInterval(autoChangeImage, 3000);
+                
+                
+                btn[0].onclick = function(){
+                    changeImage(images[0], 0);
+                };
+                btn[1].onclick = function(){
+                    changeImage(images[1], 1);
+                };
+                btn[2].onclick = function(){
+                    changeImage(images[2], 2);
+                };
+                </script>
+        
+           
+        </section>
+        
+        
+    
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style1.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(finalbg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    position: relative;
+    z-index: 1;
+}
+
+.logo img {
+    width: 80px;
+    position: absolute;
+    top: -40px;
+    left: -90px;
+}
+
+.logo p {
+    font-size: 30px;
+    font-weight: bold;
+    color: azure;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 40px; /* Increased spacing between navbar elements */
+    position: relative; /* Required for the hover effect */
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+nav li a:hover {
+    color: #ee7e1c;
+}
+
+nav li a:hover::after {
+    content: ''; 
+    /* Create the line */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust the distance of the line from the text */
+    width: 100%;
+    height: 2px; /* Adjust the thickness of the line */
+    background-color: #c2e0fd;
+}
+
+
+button {
+    background: #ee7e1c;
+    border: 2px solid #c2e0fd;
+    
+    border-radius: 15px;
+    padding: 9px 25px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+button:hover {
+    background-color: #ee7e1c;
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.centered-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    position: relative; /* Required for the overline */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.centered-text h1:hover {
+    text-decoration: none; /* Remove default underline on hover */
+}
+
+.centered-text h1:hover::before {
+    content: '';
+    position: absolute;
+    top: -5px; /* Adjust the distance of the overline from the text */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Adjust the thickness of the overline */
+    background-color: #fff;
+}
+
+.centered-text h1:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Adjust the distance of the underline from the text */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Adjust the thickness of the underline */
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.5); /* Add shadow effect */
+}
+
+
+.centered-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.water-effect {
+    background: url(water.jpg) repeat;
+    background-size: auto 150%;
+    animation: waterEffect 8s infinite linear alternate-reverse;
+}
+
+@keyframes waterEffect {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+
+</style>
+
+
+	
+
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="logoF.jpg" alt="logoF"></div>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="">Courses</a>
+        </li>
+        <li>
+          <a href="">Contact Us</a>
+        </li>
+      </ul>
+    </nav><button><a href="">Login</a></button>
+    <div class="centered-text">
+      <h1>CSMSS College of Engineering</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed<br>
+      commodo, dui a hendrerit vulputate, libero nulla aliquet .</p>
+    </div>
+  </header>
+
+
+
+
+  
+  </html>

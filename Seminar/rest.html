@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="rest.css">
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSMSS 🏫 </title>
+
+
+    
+    <!--styling for home section-->
+   <style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif', serif;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 500;
+    color: #bebcbb;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+h1:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 120px #fff;
+}
+
+.navbar {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 0;
+    border: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.nav-item {
+    color: rgb(243, 239, 239);
+    text-decoration: none;
+    padding: 14px 20px;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-item:hover {
+    color: #eb8e0a;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.nav-item:hover::after {
+    background-color: #e37a2a;
+}
+
+.home-banner {
+    background-image: linear-gradient(rgba(7, 7, 7, 0), rgba(9, 8, 8, 0.3)), url('finalbg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.home-banner h1 {
+    margin-top: -50px;
+    font-size: 48px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.home-banner h1::after,
+.home-banner h1::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+.home-banner h1::before {
+    top: 0;
+    transform: translateY(-100%);
+}
+
+.home-banner h1::after {
+    bottom: 0;
+    transform: translateY(100%);
+}
+
+.home-banner h1:hover::before,
+.home-banner h1:hover::after {
+    width: 100%;
+    background-color: rgb(236, 233, 232);
+    transform: translateY(0);
+}
+
+.home-banner p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.home-banner:hover p {
+    opacity: 1;
+}
+
+   </style>
+
+</head>
+
+
+
+<!--Body section starts-->
+<body>
+
+
+<!--Home section starts-->
+<header class="home-banner">
+<div class="navbar">
+    <a href="rest.html" class="nav-item">Home</a>
+    <a href="about.html" class="nav-item">About Us</a>
+    <a href="contact.html" class="nav-item">Contact Us</a>
+    <a href="academics.html" class="nav-item">Academics</a>
+    <a href="http://localhost/login/"
+    class="nav-item">Login</a>
+</div>
+<h1>Welcome to CSMSS College of Engineering</h1>
+<p style="color: rgb(241, 240, 238) ; font-weight: 500;">Your Gateway to Success</p>
+</header>
+
+<!--JS for navbar-->
+<script>
+   let lastScrollTop = 0;
+
+window.addEventListener("scroll", function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+       
+        document.querySelector('.navbar').style.top = "-100px"; // Hide navbar
+    } else {
+       
+        document.querySelector('.navbar').style.top = "0"; // Show navbar
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+}, false);
+</script>
+
+
+<!--About us section starts-->
+
+     <section class="about">
+        <marquee class="scroll-text" behavior="scroll" direction="left"> CSMSS COLLEGE OF ENGINEERING- YOUR GATEWAY TO SUCCESS ! </marquee>
+        <h2>About Us</h2>
+        <div class="about-content">
+            <img src="https://www.csmssengg.org/images/csmssengg.jpg" class="logo" alt="College Logo">
+            <div class="principal-message">
+                <p class="highlighted-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis nulla auctor, tempor urna at, sollicitudin ipsum. Phasellus accumsan auctor lacus, at lobortis lacus efficitur vel. Nulla facilisi. Phasellus nec velit eu sem fermentum rutrum. Morbi non libero a mi aliquet aliquet ut a nisi. Cras vitae justo sem. Nullam et venenatis mi, vel congue urna.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur libero excepturi neque odio perferendis, alias accusantium natus voluptatem consequuntur suscipit assumenda eligendi laboriosam!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam eum, optio magni non perspiciatis adipisci voluptatibus molestias ea numquam nostrum, 
+                </p>
+            </div>
+        </div>
+        <div class="btn-container">
+            <a href="about.html" class="hero-btn">Click here to know more</a>
+        </div>
+        
+        <marquee class="scroll-text" behavior="scroll" direction="left"> CSMSS COLLEGE OF ENGINEERING - YOUR GATEWAY TO SUCCESS ! </marquee>
+    </section>
+    
+
+
+<!--photo gallery-->
+<section>
+    <div class="hero">
+        <h2 class="gallery-heading">Photo Gallery</h2>
+        <p style="font-size: 20px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus eius itaque voluptas ex nulla quae minima hic non repellat quas.</p>
+        <div class="row">
+            <div class="col1">
+                <h1>Lorem, ipsum dolor.</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium error deserunt unde assumenda incidunt qui iusto exercitationem ad. Distinctio quasi natus amet reprehenderit, consequatur optio. Recusandae, odio fugiat? Doloribus, recusandae.</p>
+                <button type="button" class="explore-btn">explore</button>
+                <ul>
+                    <li class="btn active"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                </ul>
+            </div>
+            <div class="col2">
+                <img src="audi.jpg" id="banner">
+            </div>
+        </div>
+    </div>
+
+    <!--JS FOR PHOTO GALLERY-->
+    <script>var btn = document.getElementsByClassName("btn");
+        var banner = document.getElementById("banner");
+        var dots = document.querySelectorAll(".btn");
+        
+        
+        function changeImage(imageSrc, activeIndex) {
+            banner.src = imageSrc;
+            dots.forEach(function(dot, index) {
+                if (index === activeIndex) {
+                    dot.classList.add("active");
+                } else {
+                    dot.classList.remove("active");
+                }
+            });
+            banner.classList.add("zoom");
+            setTimeout(function() {
+                banner.classList.remove("zoom");
+            }, 500);
+        }
+        
+       
+        var images = ["audi.jpg", "sports.jpg", "library.jpg"];
+        
+        
+        var activeIndex = 0;
+        
+        
+        function autoChangeImage() {
+            changeImage(images[activeIndex], activeIndex);
+            activeIndex = (activeIndex + 1) % images.length; 
+        }
+        
+        
+        setInterval(autoChangeImage, 3000);
+        
+        
+        btn[0].onclick = function(){
+            changeImage(images[0], 0);
+        };
+        btn[1].onclick = function(){
+            changeImage(images[1], 1);
+        };
+        btn[2].onclick = function(){
+            changeImage(images[2], 2);
+        };
+        </script>
+
+   
+</section>
+
+
+
+<!--Course section-->
+
+    <section class="course">
+        <h2>Courses we offer</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. eveniet ex, maxime dolore totam qu</p>
+        <div class="row">
+            <div class="course-col">
+                <h3>CS Engineering</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi eaque dicta vero saepe iure ab voluptate, omnis quae pariatur rem hic dolore quod.</p>
+            </div>
+            <div class="course-col">
+                <h3>Civil Engineering</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi eaque dicta vero saepe iure ab voluptate, omnis quae pariatur rem hic dolore quod.</p>
+            </div>
+            <div class="course-col">
+                <h3>AI & DS Engineering</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi eaque dicta vero saepe iure ab voluptate, omnis quae pariatur rem hic dolore quod.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Mechanical Engineering</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi eaque dicta vero saepe iure ab voluptate, omnis quae pariatur rem hic dolore quod.lorem50</p>
+            </div>
+            <div class="course-col">
+                <h3>Electrical Engineering</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi eaque dicta vero saepe iure ab voluptate, omnis quae pariatur rem hic dolore quod.</p>
+            </div>
+            <div class="course-col">
+                <h3>ECE Engineering</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi eaque dicta vero saepe iure ab voluptate, omnis quae pariatur rem hic dolore quod.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+<!--campus-->
+
+    <section class="campus">
+        <h2>Compus Facilities</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptatem, ex quae ipsum provident ratione.</p>
+        <div class="row">
+            <div class="campus-col">
+                <img src="hostel.jpg">
+                <div class="layer">
+                    <h3>HOSTEL</h3>
+                    <div class="text-container">
+                        <p class="text-line">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="library.jpg">
+                <div class="layer">
+                    <h3>LIBRARY</h3>
+                    <div class="text-container">
+                        <p class="text-line">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="sports.jpg">
+                <div class="layer">
+                    <h3>SPORTS AREA</h3>
+                    <div class="text-container">
+                        <p class="text-line">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="campus-col">
+                <img src="audi.jpg">
+                <div class="layer">
+                    <h3>AUDITORIUM</h3>
+                    <div class="text-container">
+                        <p class="text-line">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="gym.jpg">
+                <div class="layer">
+                    <h3>GYMNASIUM</h3>
+                    <div class="text-container">
+                        <p class="text-line">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="Lab.jpg">
+                <div class="layer">
+                    <h3>EQUIPIED PRACTICAL LABS</h3>
+                    <div class="text-container">
+                        <p class="text-line">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--what our student  says - testimonials-->
+
+    <section class="testimonials">
+        <h2>What our students say</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptatem, ex quae ipsum provident ratione.</p>
+        <div class="row">
+            <div class="testimonial-col">
+                <img src="https://media.istockphoto.com/id/1135381120/photo/portrait-of-a-young-woman-outdoors-smiling.jpg?s=612x612&w=0&k=20&c=T5dukPD1r-o0BFqeqlIap7xzw07icucetwKaEC2Ms5M=" alt="">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, saepe! Eos voluptas ea sint placeat ratione possimus, minus, totam cupiditate, asperiores repudiandae officiis?</p>
+                    <h3>Lorem, ipsum.</h3>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="https://media.istockphoto.com/id/1135381173/photo/portrait-of-a-young-man-outdoors-smiling.jpg?s=612x612&w=0&k=20&c=J8DKGHI8o-oj8cY1CCNpFY2V9OmVVbJuKSO2DdbMvRg=" alt="">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, saepe! Eos voluptas ea sint placeat ratione possimus, minus, totam cupiditate, asperiores repudiandae officiis?</p>
+                    <h3>Lorem consectetur </h3>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<!--contact us-->
+
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, aliquam ullam. Error accusamus a sunt quos quas fugiat amet exercitationem autem quis iusto.</p>
+        </div>
+    
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <h3> <i style='font-size:24px' class='fas'>&#xf3c5;</i> Address</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. ,<br> facere tenetur, quasi natus doloribus illum eveniet, <br>] ipsum voluptatibus quisquam.</p>
+                </div>
+                <div class="box">
+                    <h3> <i style="font-size:24px" class="fa">&#xf095;</i>
+                         Phone</h3>
+                    <p>XXXXXXXX</p>
+                </div>
+                <div class="box">
+                    <h3>  <i style="font-size:24px" class="fa">&#xf0e0;</i> Email </h3>
+                    <p>abc@gmail.com</p>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <h2>Your Feedback</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Type your Message</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section> 
+
+   
+    
+        
+        
+</body>
+</html>
